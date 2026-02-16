@@ -8,7 +8,7 @@ function App() {
   return (
     <>
     <Header                                                                   
-      appName="React Day1"                                                    
+      appName="React Day"                                                    
       menuItems={['Home', 'About', 'Contact']}
     />
     {/*Header component called here
@@ -19,11 +19,19 @@ function App() {
     <Home                                                    
       heading="Welcome to the Home Page"                     
       content="This is the main content of the home page."
+
+      
     />
+    
+    
+  
+    
     {/*Home component called here
       props passed to Home component(heading and content)*/}
 
     <Footer name="kanika" year={2024} />             {/*Footer component called here*/}
+
+    
 
                     
 </>  );
