@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 
-function Header({appName, menuItems}) {     //using props
+function Header({appName, menuItems = [] }) {     //using props
   const [count,setcount]=useState(0);
   
   return (

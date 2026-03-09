@@ -5,7 +5,7 @@ function Counter() {
   return (
     <div className='counter-container'>
         <p className='message'>You Clicked {count} times</p>
-        <button className='btn' onClick={()=>{setcount(count+1)}} >Click Me Increment</button>
+        <button className='btn' onClick={()=>{setcount(count+1)}} >Click Me Increment </button>
         <button disabled={count <= 0}  className='btn' onClick={()=>{setcount(count-1)}} > Click Me Decrement</button>
         <button className='btn' onClick={()=>{setcount(0)}} > Restart</button>
 
