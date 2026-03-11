@@ -1,41 +1,41 @@
-import React from 'react'
-import Header from './Component/Header'
-import Home from './Component/Home';
-import Footer from './Component/Footer';
-import './Component/Style.css';
-import { Routes, Route } from 'react-router-dom';
- 
+import React from "react";
+import "./Component/Style.css";
+import { Routes, Route } from "react-router-dom";
+
+import Imageapi from "./Component/Imageapi";
+import Detailpage from "./Component/Detailpage";
+import Header from "./Component/Header";
+import Home from "./Component/Home";
+import Footer from "./Component/Footer";
 
 function App() {
-   
   return (
     <>
-     {/* <Routes>
-    <Route path='/contact' element={<ContactForm/>} />  
-    </Routes> */}
-    
-    <Header                                                                   
-      appName="React Day"                                                    
-      menuItems={['Home', 'About', 'Contact']}
-    />
-    {/*Header component called here
-    props passed to Header component(appName and menuItems)*/}
-    
+      <Header
+        appName="React Day"
+        menuItems={["Home", "About", "Contact"]}
+      />
 
+      {/* Routing starts here */}
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Home
+              heading="Welcome to the Home Page"
+              content="This is the main content of the home page."
+            />
+          }
+        />
 
-    <Home                                                    
-      heading="Welcome to the Home Page"                     
-      content="This is the main content of the home page."
-    />
-   
+        <Route path="/images" element={<Imageapi />} />
 
-    <Footer name="kanika" year={2024} />             {/*Footer component called here*/}
+        <Route path="/image/:id" element={<Detailpage />} />
+      </Routes>
 
-    
-
-                    
-</>  );
+      <Footer name="kanika" year={2024} />
+    </>
+  );
 }
-  
 
-export default App
+export default App;

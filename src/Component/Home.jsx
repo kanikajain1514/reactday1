@@ -4,12 +4,21 @@ import Userlist from './Userlist'
 import ContactForm from './ContactForm'
 import Api from '../Api'
 import Footer from './Footer'
+import Imageapi from './Imageapi'
+import './Style.css'
+import Header from './Header'
+
+
 
 function Home({heading, content}) {
   return (
     <div className="home">
     <h2>{heading}</h2>
     <p>{content}</p>
+
+
+                                             
+    
     <Counter />
 
 
@@ -18,6 +27,8 @@ function Home({heading, content}) {
     <ContactForm />
 
     <Api />
+
+     <Imageapi /> 
 
     {/* <Footer /> */}
 
